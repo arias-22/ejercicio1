@@ -1,0 +1,18 @@
+<div id="numbers"></div>
+<script>
+    numbers = "";
+    for (let i = 2; i <= 29; i++) {
+            let isPrime = true;
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                numbers += ("<p>"+i+"<p/>");
+            }
+        }
+        document.getElementById('numbers').innerHTML = numbers;
+        console.log(numbers);
+</script>
